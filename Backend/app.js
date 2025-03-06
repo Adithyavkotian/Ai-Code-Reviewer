@@ -1,3 +1,8 @@
-// filepath: c:\Users\Lenovo\engineering\Ai-Code-Reviewer\Backend\app.js
+const express=require('express');
 
-// Initial setup
+const app=express();
+
+app.use('/',(req,res)=>{
+    res.send('Hello World');
+})
+module.exports=app;
