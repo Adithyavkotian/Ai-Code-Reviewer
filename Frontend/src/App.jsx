@@ -22,8 +22,7 @@ function App() {
 
   async function reviewCode() {
     try {
-      const response = await axios.post('http://localhost:3000/ai/generate-content', { prompt: code });
-      setReview(response.data);
+const response = await axios.post(`${import.meta.env.VITE_API_URL}/ai/generate-content`, { prompt: code });      setReview(response.data);
     } catch (error) {
       console.error('Error:', error);
     }
